@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual de Leveza Feminina — Dora Moreira</title>
+  <meta name="description" content="O método que ajuda mulheres sobrecarregadas a reconquistar sua leveza sem abandonar tudo que construíram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       PALETA 1 — TERRACOTA E AREIA (ativa)
+    ============================================================ */
+    :root {
+      --bg-primary:   #A8553F;   /* terracota */
+      --bg-secondary: #F0DCC8;   /* areia */
+      --bg-tertiary:  #FAF6F1;   /* off-white */
+      --text-on-primary:   #FFFFFF;
+      --text-on-secondary: #7A3A2A;
+      --cta-bg:   #6B7A4F;       /* verde oliva */
+      --cta-text: #FFFFFF;
+    }
+
+    /* ============================================================
+       PALETA ALTERNATIVA 2 — MALVA E LILÁS (comentada)
+    ============================================================ */
+    /*
+    :root {
+      --bg-primary:   #6B4C5E;
+      --bg-secondary: #E8D9E5;
+      --bg-tertiary:  #F7F2F6;
+      --text-on-primary:   #FFFFFF;
+      --text-on-secondary: #4A3140;
+      --cta-bg:   #B8862E;
+      --cta-text: #FFFFFF;
+    }
+    */
+
+    /* ============================================================
+       PALETA ALTERNATIVA 3 — VERDE SÁLVIA E CREME (comentada)
+    ============================================================ */
+    /*
+    :root {
+      --bg-primary:   #4A5D4E;
+      --bg-secondary: #EDE6D6;
+      --bg-tertiary:  #F8F5EE;
+      --text-on-primary:   #FFFFFF;
+      --text-on-secondary: #33422F;
+      --cta-bg:   #B5603F;
+      --cta-text: #FFFFFF;
+    }
+    */
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      color: var(--text-on-secondary);
+      background: var(--bg-tertiary);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ============================================================
+       TIPOGRAFIA
+    ============================================================ */
+    h1 {
+      font-weight: 700;
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: clamp(1.4rem, 4.5vw, 2.2rem);
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+      line-height: 1.3;
+    }
+
+    .subheadline {
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      line-height: 1.5;
+    }
+
+    p { line-height: 1.7; }
+
+    strong { font-weight: 700; }
+
+    /* ============================================================
+       LAYOUT HELPERS
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section { padding: 64px 0; }
+    .section--dark  { background: var(--bg-primary); color: var(--text-on-primary); }
+    .section--light { background: var(--bg-secondary); }
+    .section--white { background: var(--bg-tertiary); }
+
+    /* ============================================================
+       BOTÕES CTA
+    ============================================================ */
+    .btn-cta {
+      display: inline-block;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-decoration: none;
+      padding: 18px 36px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: filter 0.2s, transform 0.15s;
+      width: 100%;
+      max-width: 480px;
+    }
+    .btn-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+    .cta-wrap { display: flex; justify-content: center; margin-top: 28px; }
+
+    /* ============================================================
+       SELOS DE CONFIANÇA
+    ============================================================ */
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-on-primary);
+      opacity: 0.88;
+    }
+    .trust-badge .icon { font-size: 1.2rem; }
+
+    /* ============================================================
+       SEÇÃO 1 — HERO
+    ============================================================ */
+    #hero {
+      background: var(--bg-primary);
+      color: var(--text-on-primary);
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+
+    #hero .badge {
+      display: inline-block;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+    }
+
+    #hero h1 { margin-bottom: 16px; }
+
+    #hero .subheadline {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.92;
+    }
+
+    #hero .mockup {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto 32px;
+      border-radius: 8px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+    }
+
+    .price-block { margin-bottom: 28px; }
+    .price-from {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      text-decoration: line-through;
+    }
+    .price-main {
+      font-size: clamp(2.2rem, 7vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .price-sub {
+      font-style: italic;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* ============================================================
+       SEÇÃO 2 — IDENTIFICAÇÃO
+    ============================================================ */
+    #identificacao {
+      background: var(--bg-secondary);
+      padding: 64px 0;
+    }
+
+    .scene-wrap {
+      position: relative;
+      max-width: 560px;
+      margin: 32px auto 0;
+    }
+
+    .scene-wrap img {
+      width: 100%;
+      border-radius: 12px;
+      filter: brightness(0.85);
+    }
+
+    .bubbles {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .bubble {
+      background: #fff;
+      border-left: 4px solid var(--bg-primary);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--text-on-secondary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    /* ============================================================
+       SEÇÃO 3 — A VIRADA
+    ============================================================ */
+    #virada {
+      background: var(--bg-primary);
+      color: var(--text-on-primary);
+      padding: 72px 0;
+      text-align: center;
+    }
+
+    #virada h2 { margin-bottom: 24px; }
+
+    #virada p {
+      max-width: 640px;
+      margin: 0 auto 18px;
+      font-size: 1.05rem;
+      opacity: 0.93;
+    }
+
+    #virada .highlight-phrase {
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-weight: 700;
+      font-style: normal;
+      margin: 32px auto;
+      max-width: 560px;
+      line-height: 1.35;
+    }
+
+    /* ============================================================
+       SEÇÃO 4 — PARA QUEM É
+    ============================================================ */
+    #para-quem {
+      background: var(--bg-tertiary);
+      padding: 64px 0;
+    }
+
+    .para-quem-grid {
+      display: grid;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 680px) {
+      .para-quem-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+    }
+
+    .para-quem-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .checklist { list-style: none; margin-top: 20px; }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .checklist li::before {
+      content: '✓';
+      flex-shrink: 0;
+      background: var(--bg-primary);
+      color: #fff;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+
+    /* ============================================================
+       SEÇÃO 5 — O MÉTODO
+    ============================================================ */
+    #metodo {
+      background: var(--bg-secondary);
+      padding: 64px 0;
+    }
+
+    #metodo h2 { text-align: center; margin-bottom: 48px; }
+
+    .passo {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    @media (min-width: 680px) {
+      .passo { grid-template-columns: 1fr 1fr; }
+      .passo.reverse .passo-texto { order: -1; }
+    }
+
+    .passo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    }
+
+    .passo-numero {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--bg-primary);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .passo-texto h3 { margin-bottom: 12px; }
+
+    /* ============================================================
+       SEÇÃO 6 — TRANSFORMAÇÃO
+    ============================================================ */
+    #transformacao {
+      background: var(--bg-primary);
+      color: var(--text-on-primary);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    #transformacao h2 { margin-bottom: 40px; }
+
+    .antes-depois {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .antes-depois img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    }
+
+    .antes-label, .depois-label {
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      opacity: 0.75;
+    }
+
+    .arrow-center {
+      font-size: 2.5rem;
+      opacity: 0.7;
+      padding: 0 8px;
+    }
+
+    /* ============================================================
+       SEÇÃO 7 — SOBRE A AUTORA
+    ============================================================ */
+    #autora {
+      background: var(--bg-tertiary);
+      padding: 64px 0;
+    }
+
+    .autora-grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 680px) {
+      .autora-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .autora-grid img {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.14);
+    }
+
+    .autora-texto .tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bg-primary);
+      margin-bottom: 12px;
+    }
+
+    /* ============================================================
+       SEÇÃO 8 — PROVA SOCIAL
+    ============================================================ */
+    #prova-social {
+      background: var(--bg-secondary);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    #prova-social h2 { margin-bottom: 40px; }
+
+    .depo-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .depo-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .depo-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .depo-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .depo-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .depo-name { font-weight: 700; font-size: 0.9rem; }
+    .depo-sub  { font-size: 0.78rem; opacity: 0.65; }
+
+    .depo-card p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #333;
+      font-style: italic;
+    }
+
+    .depo-wpp-bar {
+      background: #25D366;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px 4px 0 0;
+      margin: -20px -20px 16px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================================
+       SEÇÃO 9 — ESCOLHA
+    ============================================================ */
+    #escolha {
+      background: var(--bg-primary);
+      color: var(--text-on-primary);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    #escolha h2 { margin-bottom: 12px; }
+    #escolha .subheadline { margin-bottom: 40px; opacity: 0.88; }
+
+    .escolha-cards {
+      display: grid;
+      gap: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 580px) {
+      .escolha-cards { grid-template-columns: 1fr 1fr; }
+    }
+
+    .escolha-card {
+      border-radius: 12px;
+      padding: 28px 22px;
+      text-align: left;
+    }
+
+    .escolha-card--no {
+      background: rgba(0,0,0,0.25);
+      border: 1.5px solid rgba(255,255,255,0.15);
+    }
+
+    .escolha-card--yes {
+      background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+
+    .escolha-card h3 { margin-bottom: 18px; }
+
+    .escolha-list { list-style: none; }
+    .escolha-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+    .escolha-list li .icon { flex-shrink: 0; font-size: 1rem; }
+
+    /* ============================================================
+       SEÇÃO 10 — OFERTA
+    ============================================================ */
+    #oferta {
+      background: var(--bg-tertiary);
+      padding: 64px 0;
+    }
+
+    #oferta h2 { text-align: center; margin-bottom: 40px; }
+
+    .oferta-box {
+      border: 2px solid var(--bg-primary);
+      border-radius: 14px;
+      padding: 36px 28px;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .item-list { list-style: none; margin-bottom: 28px; }
+    .item-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      gap: 16px;
+    }
+    .item-list li:last-child { border-bottom: none; }
+
+    .item-name { font-size: 0.95rem; }
+    .item-price {
+      font-size: 0.85rem;
+      color: #888;
+      text-decoration: line-through;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-top: 2px solid var(--bg-primary);
+      margin-top: 8px;
+    }
+    .total-label { font-weight: 600; font-size: 0.95rem; }
+    .total-original {
+      font-size: 1rem;
+      color: #888;
+      text-decoration: line-through;
+    }
+
+    .final-price-block { text-align: center; padding: 24px 0 8px; }
+    .final-price-label { font-size: 0.85rem; opacity: 0.65; margin-bottom: 4px; }
+    .final-price {
+      font-size: clamp(2.4rem, 8vw, 3.2rem);
+      font-weight: 700;
+      color: var(--bg-primary);
+      line-height: 1;
+    }
+    .final-price-note { font-style: italic; font-size: 0.88rem; opacity: 0.65; margin-top: 6px; }
+
+    /* ============================================================
+       SEÇÃO 11 — COMO FUNCIONA O ACESSO
+    ============================================================ */
+    #acesso {
+      background: var(--bg-secondary);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    #acesso h2 { margin-bottom: 40px; }
+
+    .acesso-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    @media (min-width: 520px) {
+      .acesso-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .acesso-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .acesso-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+
+    .acesso-item h3 { font-size: 1rem; }
+    .acesso-item p  { font-size: 0.88rem; opacity: 0.8; }
+
+    /* ============================================================
+       SEÇÃO 12 — FAQ
+    ============================================================ */
+    #faq {
+      background: var(--bg-tertiary);
+      padding: 64px 0;
+    }
+
+    #faq h2 { text-align: center; margin-bottom: 40px; }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-on-secondary);
+      text-align: left;
+      gap: 16px;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform 0.25s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 0 20px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-on-secondary);
+      opacity: 0.85;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ============================================================
+       SEÇÃO 13 — CTA FINAL
+    ============================================================ */
+    #cta-final {
+      background: var(--bg-primary);
+      color: var(--text-on-primary);
+      padding: 72px 0;
+      text-align: center;
+    }
+
+    #cta-final h2 { margin-bottom: 12px; }
+    #cta-final .subheadline { margin-bottom: 32px; opacity: 0.88; }
+
+    /* ============================================================
+       STICKY CTA MOBILE
+    ============================================================ */
+    #sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 12px 20px;
+      background: var(--bg-tertiary);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    }
+
+    #sticky-cta .btn-cta { max-width: 100%; }
+
+    @media (max-width: 767px) {
+      #sticky-cta { display: block; }
+      body { padding-bottom: 80px; }
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    footer a { color: rgba(255,255,255,0.5); }
+
+    /* ============================================================
+       RESPONSIVE TWEAKS
+    ============================================================ */
+    @media (max-width: 480px) {
+      .antes-depois {
+        grid-template-columns: 1fr;
+      }
+      .arrow-center {
+        transform: rotate(90deg);
+        font-size: 2rem;
+        margin: 0 auto;
+      }
+      .antes-depois .depois-col { order: 3; }
+      .antes-depois .arrow-center { order: 2; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SEÇÃO 1 — HERO
+============================================================ -->
+<section id="hero">
+  <div class="container">
+    <span class="badge">Método Digital · Acesso Imediato</span>
+
+    <h1>Pare de carregar tudo sozinha.<br />Aprenda a viver com leveza.</h1>
+
+    <p class="subheadline">
+      O manual prático que ajuda mulheres sobrecarregadas a reconquistar sua paz interior
+      — sem precisar abandonar tudo que construíram.
+    </p>
+
+    <img
+      class="mockup"
+      src="/assets/mockup-hero.png"
+      alt="Capa do Manual de Leveza Feminina, produto digital de Dora Moreira"
+    />
+
+    <div class="price-block">
+      <div class="price-from">De R$ 297,00</div>
+      <div class="price-main">R$ 97,00</div>
+      <div class="price-sub">ou 3× de R$ 34,99 sem juros</div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#" class="btn-cta">QUERO MINHA LEVEZA AGORA</a>
+    </div>
+
+    <div class="trust-badges">
+      <div class="trust-badge"><span class="icon">🔒</span> Compra 100% segura</div>
+      <div class="trust-badge"><span class="icon">✅</span> 7 dias de garantia</div>
+      <div class="trust-badge"><span class="icon">⚡</span> Acesso imediato</div>
+      <div class="trust-badge"><span class="icon">💳</span> Até 3× sem juros</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 2 — IDENTIFICAÇÃO
+============================================================ -->
+<section id="identificacao" class="section section--light">
+  <div class="container">
+    <h2>Você reconhece algum desses pensamentos?</h2>
+    <p class="subheadline" style="margin-top: 8px;">
+      Se sim, você não está sozinha — e isso tem solução.
+    </p>
+
+    <div class="scene-wrap">
+      <img
+        src="/assets/cena-domestica.jpg"
+        alt="Mulher sentada na cozinha com expressão cansada, cercada de afazeres do dia a dia"
+      />
+    </div>
+
+    <div class="bubbles">
+      <div class="bubble">"Já fiz tudo hoje, mas sinto que não fiz nada."</div>
+      <div class="bubble">"Cuido de todo mundo, mas quem cuida de mim?"</div>
+      <div class="bubble">"Eu deveria ser grata — mas me sinto vazia."</div>
+      <div class="bubble">"Não aguento mais, mas não posso parar."</div>
+      <div class="bubble">"Onde foi parar a mulher que eu era antes?"</div>
+      <div class="bubble">"Eu me perdi no meio das responsabilidades."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 3 — A VIRADA
+============================================================ -->
+<section id="virada" class="section section--dark">
+  <div class="container" style="text-align:center;">
+    <h2>O problema não é você.<br />É o jeito que te ensinaram a existir.</h2>
+
+    <p>
+      Desde pequena, você aprendeu que ser boa mulher significa dar conta de tudo.
+      Trabalho, casa, filhos, relacionamento, corpo, saúde mental — ao mesmo tempo,
+      com sorriso no rosto e sem reclamar.
+    </p>
+
+    <p>
+      Esse modelo não é força. É exaustão disfaçada de virtude.
+    </p>
+
+    <p>
+      E nenhuma quantidade de autocuidado de domingo vai resolver
+      o que está enraizado na sua forma de funcionar no mundo.
+    </p>
+
+    <div class="highlight-phrase">
+      Leveza não é ausência de responsabilidade.<br />
+      É uma relação diferente com elas.
+    </div>
+
+    <p>
+      O Manual de Leveza Feminina não é sobre fazer menos.
+      É sobre deixar de carregar o peso do que nunca foi seu — e descobrir
+      como atravessar os dias sem se destruir no processo.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 4 — PARA QUEM É
+============================================================ -->
+<section id="para-quem" class="section section--white">
+  <div class="container">
+    <h2 style="margin-bottom: 32px;">Este método é para você se…</h2>
+
+    <div class="para-quem-grid">
+      <div>
+        <ul class="checklist">
+          <li>Você se sente cansada mesmo depois de dormir</li>
+          <li>Você coloca todo mundo na frente — e você vai ficando para depois</li>
+          <li>Você tem dificuldade de pedir ajuda ou delegar</li>
+          <li>Você sente culpa quando tira um tempo para si</li>
+          <li>Você já não sabe mais o que gosta, o que quer, quem é</li>
+          <li>Você vive no piloto automático, dia após dia</li>
+          <li>Você quer mudança, mas não sabe nem por onde começar</li>
+          <li>Você já tentou terapia, meditação, journaling — e ainda assim não se sente leve</li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="/assets/mulher-cansada.jpg"
+          alt="Mulher com expressão de cansaço emocional, olhando pela janela"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 5 — O MÉTODO
+============================================================ -->
+<section id="metodo" class="section section--light">
+  <div class="container">
+    <h2>Como funciona o método em 3 passos</h2>
+
+    <!-- Passo 1 -->
+    <div class="passo">
+      <img
+        src="/assets/passo-1.jpg"
+        alt="Mulher olhando para si mesma no espelho com calma — passo 1 do método"
+      />
+      <div class="passo-texto">
+        <div class="passo-numero">01</div>
+        <h3>Reconheça o peso que você carrega</h3>
+        <p>
+          Antes de qualquer transformação, você precisa nomear o que está te
+          sobrecarregando. No primeiro módulo, você vai mapear suas crenças sobre
+          cuidado, merecimento e limites — muitas delas herdadas, nunca questionadas.
+          Esse reconhecimento já é o início da leveza.
+        </p>
+      </div>
+    </div>
+
+    <!-- Passo 2 -->
+    <div class="passo reverse">
+      <img
+        src="/assets/passo-2.jpg"
+        alt="Caderno aberto com anotações e uma xícara de chá — passo 2 do método"
+      />
+      <div class="passo-texto">
+        <div class="passo-numero">02</div>
+        <h3>Reescreva as regras que você nunca escolheu</h3>
+        <p>
+          Com exercícios práticos e reflexões guiadas, você vai identificar os
+          padrões que drenam sua energia e substituí-los por escolhas conscientes.
+          Não é sobre se tornar outra pessoa — é sobre ser <strong>mais você</strong>,
+          com menos ruído interno e menos peso alheio.
+        </p>
+      </div>
+    </div>
+
+    <!-- Passo 3 -->
+    <div class="passo">
+      <img
+        src="/assets/passo-3.jpg"
+        alt="Mulher sorrindo de forma genuína, relaxada em ambiente iluminado — passo 3 do método"
+      />
+      <div class="passo-texto">
+        <div class="passo-numero">03</div>
+        <h3>Instale a leveza na sua rotina real</h3>
+        <p>
+          Leveza não é um estado que você visita nos fins de semana. É uma forma
+          de existir nos dias comuns. No terceiro passo, você vai aprender
+          micro-práticas que cabem na sua vida do jeito que ela é agora —
+          sem precisar de mais tempo, mais dinheiro ou circunstâncias perfeitas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 6 — TRANSFORMAÇÃO
+============================================================ -->
+<section id="transformacao" class="section section--dark">
+  <div class="container">
+    <h2>O antes e o depois que ninguém fotografa</h2>
+    <p style="max-width: 540px; margin: 0 auto 40px; opacity: 0.88;">
+      Não é sobre a aparência. É sobre o que muda por dentro — a relação com
+      o espelho, com o dia, com as pessoas ao redor.
+    </p>
+
+    <div class="antes-depois">
+      <div class="antes-col">
+        <div class="antes-label">Antes</div>
+        <img
+          src="/assets/antes.jpg"
+          alt="Mulher com expressão pesada, cansada, sobrecarregada — estado antes do método"
+        />
+      </div>
+
+      <div class="arrow-center">→</div>
+
+      <div class="depois-col">
+        <div class="depois-label">Depois</div>
+        <img
+          src="/assets/depois.jpg"
+          alt="Mulher com expressão serena e leve, em paz consigo mesma — estado após o método"
+        />
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; max-width: 560px; margin-left:auto; margin-right:auto;">
+      <p style="margin-bottom: 10px; opacity: 0.9;"><strong>Antes:</strong> Exaustão constante, culpa por descansar, sensação de vazio mesmo com a vida cheia, dificuldade de dizer não, ansiedade de domingo à noite.</p>
+      <p style="opacity: 0.9;"><strong>Depois:</strong> Clareza sobre o que importa de verdade, limites sem culpa, prazer nos dias simples, presença de volta, identidade além dos papéis que você ocupa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 7 — SOBRE A AUTORA
+============================================================ -->
+<section id="autora" class="section section--white">
+  <div class="container">
+    <div class="autora-grid">
+      <img
+        src="/assets/dora-moreira.jpg"
+        alt="Foto de Dora Moreira, criadora do Manual de Leveza Feminina"
+      />
+      <div class="autora-texto">
+        <p class="tag">Sobre a autora</p>
+        <h2>Dora Moreira</h2>
+        <p style="margin-top: 16px;">
+          Por anos, Dora foi a mulher que dava conta de tudo — e se orgulhava disso.
+          Carreira sólida, casa impecável, filhos amados, relacionamento estável.
+          Por fora, tudo certo. Por dentro, uma exaustão que ela nem sabia nomear.
+        </p>
+        <p style="margin-top: 14px;">
+          O colapso veio silencioso, como um apagão interno. Foi aí que ela parou
+          para entender de verdade o que estava acontecendo — e descobriu que
+          nunca havia aprendido a existir sem precisar provar alguma coisa.
+        </p>
+        <p style="margin-top: 14px;">
+          Hoje, como terapeuta e mentora, Dora acompanha mulheres que vivem
+          exatamente o que ela viveu. O Manual de Leveza Feminina é a síntese
+          de tudo que ela aprendeu — dentro e fora do consultório.
+        </p>
+        <p style="margin-top: 14px;">
+          <strong>Mais de 2.000 mulheres já passaram por esse processo.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 8 — PROVA SOCIAL
+============================================================ -->
+<section id="prova-social" class="section section--light">
+  <div class="container">
+    <h2>O que elas estão dizendo</h2>
+    <p class="subheadline" style="margin-top: 8px; margin-bottom: 40px;">
+      Resultados reais de mulheres reais.
+    </p>
+
+    <div class="depo-grid">
+
+      <div class="depo-card">
+        <div class="depo-wpp-bar">WhatsApp · Mensagem recebida</div>
+        <div class="depo-header">
+          <div class="depo-avatar">C</div>
+          <div>
+            <div class="depo-name">Camila R.</div>
+            <div class="depo-sub">Mãe de 2, professora</div>
+          </div>
+        </div>
+        <p>
+          "Eu li o manual em dois dias e chorei no terceiro capítulo. Não sabia que
+          carregar tudo sozinha era uma crença, não uma obrigação. Minha relação com
+          o meu marido mudou depois disso — porque eu mudei."
+        </p>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-wpp-bar">WhatsApp · Mensagem recebida</div>
+        <div class="depo-header">
+          <div class="depo-avatar">A</div>
+          <div>
+            <div class="depo-name">Aline M.</div>
+            <div class="depo-sub">Empreendedora, 38 anos</div>
+          </div>
+        </div>
+        <p>
+          "Já tinha feito terapia por anos. O manual não substitui isso, mas me deu
+          algo diferente: ferramentas para o dia a dia. Hoje eu consigo notar quando
+          estou saindo do meu eixo — e sei o que fazer."
+        </p>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-wpp-bar">WhatsApp · Mensagem recebida</div>
+        <div class="depo-header">
+          <div class="depo-avatar">F</div>
+          <div>
+            <div class="depo-name">Fernanda S.</div>
+            <div class="depo-sub">Advogada, 45 anos</div>
+          </div>
+        </div>
+        <p>
+          "Estava cética — já comprei muita coisa de autoconhecimento que não passou
+          de clichê. Mas a Dora fala de um lugar que é real. As perguntas do método
+          me desarmaram. Não esperava tanto."
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 9 — ESCOLHA
+============================================================ -->
+<section id="escolha" class="section section--dark">
+  <div class="container">
+    <h2>Duas realidades. Você escolhe qual viver.</h2>
+    <p class="subheadline">A decisão de comprar ou não é, ela mesma, parte da escolha.</p>
+
+    <div class="escolha-cards">
+
+      <div class="escolha-card escolha-card--no">
+        <h3>Sem o Manual</h3>
+        <ul class="escolha-list">
+          <li><span class="icon">✗</span> Continuar no ciclo de exaustão e culpa</li>
+          <li><span class="icon">✗</span> Aguardar o dia em que as coisas "acalmam" — que não vem</li>
+          <li><span class="icon">✗</span> Colocar seu bem-estar no fim da lista indefinidamente</li>
+          <li><span class="icon">✗</span> Perder mais anos sem saber quem você é além dos seus papéis</li>
+          <li><span class="icon">✗</span> Sentir que a vida passa e você assiste de longe</li>
+        </ul>
+      </div>
+
+      <div class="escolha-card escolha-card--yes">
+        <h3>Com o Manual</h3>
+        <ul class="escolha-list">
+          <li><span class="icon">✓</span> Entender o que realmente te sobrecarrega — e mudar isso</li>
+          <li><span class="icon">✓</span> Estabelecer limites sem culpa e sem drama</li>
+          <li><span class="icon">✓</span> Reencontrar prazer nos dias simples</li>
+          <li><span class="icon">✓</span> Viver presente — não em piloto automático</li>
+          <li><span class="icon">✓</span> Ser quem você é, não só o que você faz</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="cta-wrap" style="margin-top: 40px;">
+      <a href="#" class="btn-cta">QUERO COMPRAR AGORA</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 10 — OFERTA
+============================================================ -->
+<section id="oferta" class="section section--white">
+  <div class="container">
+    <h2 style="text-align:center;">Tudo o que você recebe hoje</h2>
+
+    <div class="oferta-box">
+      <ul class="item-list">
+        <li>
+          <span class="item-name">📖 Manual de Leveza Feminina (e-book completo)</span>
+          <span class="item-price">R$ 197</span>
+        </li>
+        <li>
+          <span class="item-name">📋 Workbook de exercícios práticos</span>
+          <span class="item-price">R$ 47</span>
+        </li>
+        <li>
+          <span class="item-name">🎧 Meditação guiada: Soltar o peso</span>
+          <span class="item-price">R$ 37</span>
+        </li>
+        <li>
+          <span class="item-name">🗓️ Planner semanal da leveza (PDF editável)</span>
+          <span class="item-price">R$ 17</span>
+        </li>
+      </ul>
+
+      <div class="total-line">
+        <span class="total-label">Valor total</span>
+        <span class="total-original">R$ 298,00</span>
+      </div>
+
+      <div class="final-price-block">
+        <div class="final-price-label">Por apenas</div>
+        <div class="final-price">R$ 97,00</div>
+        <div class="final-price-note">ou 3× de R$ 34,99 sem juros</div>
+      </div>
+
+      <div class="cta-wrap">
+        <a href="#" class="btn-cta">QUERO COMPRAR AGORA</a>
+      </div>
+
+      <p style="text-align:center; margin-top: 20px; font-size: 0.85rem; opacity: 0.6;">
+        🔒 Pagamento 100% seguro · Garantia de 7 dias sem perguntas
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 11 — COMO FUNCIONA O ACESSO
+============================================================ -->
+<section id="acesso" class="section section--light">
+  <div class="container">
+    <h2>Como funciona o acesso</h2>
+    <p class="subheadline" style="margin-top: 8px; margin-bottom: 40px;">
+      Simples, rápido e sem complicação.
+    </p>
+
+    <div class="acesso-grid">
+      <div class="acesso-item">
+        <div class="acesso-icon">✉️</div>
+        <h3>1. Você recebe um e-mail</h3>
+        <p>Após a confirmação do pagamento, você recebe um e-mail com o link de acesso em até 5 minutos.</p>
+      </div>
+      <div class="acesso-item">
+        <div class="acesso-icon">⬇️</div>
+        <h3>2. Faz o download</h3>
+        <p>Todos os materiais estão em PDF, prontos para ler no celular, tablet ou computador — online ou offline.</p>
+      </div>
+      <div class="acesso-item">
+        <div class="acesso-icon">✅</div>
+        <h3>3. Começa agora</h3>
+        <p>Você tem acesso imediato e permanente. Sem prazo de expiração, sem mensalidade, sem complicação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 12 — FAQ
+============================================================ -->
+<section id="faq" class="section section--white">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Para quem é o Manual de Leveza Feminina?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        O manual foi criado para mulheres que se sentem sobrecarregadas, perdidas em meio às responsabilidades, ou que simplesmente não sabem mais quem são além dos papéis que ocupam. Se você já tentou "cuidar de si mesma" sem resultados duradouros, este método foi desenhado para você.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Preciso ter experiência com autoconhecimento?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Não. O manual foi escrito de forma acessível e vai do básico ao profundo. Se você nunca leu nada sobre o assunto, vai se sentir acolhida. Se já tem caminhada, vai encontrar perspectivas novas e exercícios que aprofundam o que você já sabe.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Quanto tempo leva para ver resultados?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Muitas mulheres relatam percepções importantes já na primeira semana. Transformação profunda é um processo, mas as práticas do método foram desenhadas para criar mudanças perceptíveis rapidamente — mesmo para quem tem pouco tempo no dia.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        O manual substitui a terapia?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Não, e nunca propusemos isso. O manual é complementar — ele oferece ferramentas práticas para o dia a dia que muitas vezes a terapia semanal não tem tempo de cobrir. Se você está em terapia, o manual vai potencializar seu processo.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Como vou receber os materiais?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Após a confirmação do pagamento, você recebe um e-mail com o link para download de todos os arquivos. O acesso é imediato e permanente — os arquivos são seus para sempre, sem prazo de expiração.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        E se eu não gostar? Tem garantia?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Sim. Você tem 7 dias de garantia incondicional. Se por qualquer motivo o manual não fizer sentido para você, basta entrar em contato e devolvemos 100% do valor pago, sem perguntas e sem burocracia.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Posso parcelar?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Sim. O Manual de Leveza Feminina pode ser parcelado em até 3× de R$ 34,99 sem juros no cartão de crédito. Você também pode pagar à vista via Pix com desconto.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 13 — CTA FINAL
+============================================================ -->
+<section id="cta-final" class="section section--dark">
+  <div class="container">
+    <h2>A leveza que você quer já existe em você.<br />O manual te mostra onde encontrar.</h2>
+    <p class="subheadline">
+      Junte-se a mais de 2.000 mulheres que escolheram parar de carregar tudo sozinhas.
+    </p>
+
+    <div class="cta-wrap">
+      <a href="#" class="btn-cta">QUERO COMPRAR AGORA</a>
+    </div>
+
+    <div class="trust-badges" style="margin-top: 28px;">
+      <div class="trust-badge"><span class="icon">🔒</span> Compra 100% segura</div>
+      <div class="trust-badge"><span class="icon">✅</span> 7 dias de garantia</div>
+      <div class="trust-badge"><span class="icon">⚡</span> Acesso imediato</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STICKY CTA MOBILE
+============================================================ -->
+<div id="sticky-cta" aria-hidden="true">
+  <a href="#" class="btn-cta">QUERO COMPRAR AGORA</a>
+</div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <p>© 2024 Dora Moreira · Manual de Leveza Feminina · Todos os direitos reservados</p>
+  <p style="margin-top: 6px;">
+    <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a> · <a href="#">Contato</a>
+  </p>
+  <p style="margin-top: 6px; font-size: 0.72rem;">
+    Este produto é digital. Após a confirmação do pagamento, o acesso é enviado por e-mail.
+  </p>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  /* Configuração do link de checkout — altere apenas aqui */
+  const CHECKOUT_URL = "#";
+
+  /* Aplica o URL a todos os botões CTA */
+  document.querySelectorAll('.btn-cta').forEach(btn => {
+    btn.addEventListener('click', e => {
+      if (CHECKOUT_URL === '#') return;
+      e.preventDefault();
+      window.location.href = CHECKOUT_URL;
+    });
+  });
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      /* fecha todos */
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      /* abre o clicado (se estava fechado) */
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ── Sticky CTA: some quando um CTA está visível na tela ── */
+  const stickyCta = document.getElementById('sticky-cta');
+  const ctaButtons = document.querySelectorAll('section .btn-cta');
+
+  if ('IntersectionObserver' in window) {
+    let visibleCtas = 0;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        visibleCtas += entry.isIntersecting ? 1 : -1;
+        visibleCtas = Math.max(0, visibleCtas);
+      });
+      stickyCta.style.display = visibleCtas > 0 ? 'none' : 'block';
+    }, { threshold: 0.5 });
+
+    ctaButtons.forEach(btn => observer.observe(btn));
+  }
+</script>
+
+</body>
+</html>
